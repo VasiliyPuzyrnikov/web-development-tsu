@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<HTML lang='ru'>
+<HEAD>
+<meta charset='utf-8'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<TITLE> Времена года </TITLE>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideDown(5000);
+
+    });
+});
+$(document).ready(function(){
+    $("#flip1").click(function(){
+        $("#panel1").slideDown(5000);
+
+    });
+});
+$(document).ready(function(){
+    $("#flip2").click(function(){
+        $("#panel2").slideDown(5000);
+
+    });
+});
+$(document).ready(function(){
+    $("#flip3").click(function(){
+        $("#panel3").slideDown(5000);
+
+    });
+});
+$(document).ready(function(){
+    $("#noflip").click(function(){
+        $("#panel").slideUp('slow');
+
+    });
+});
+$(document).ready(function(){
+    $("#noflip1").click(function(){
+        $("#panel1").slideUp('slow');
+
+    });
+});
+$(document).ready(function(){
+    $("#noflip2").click(function(){
+        $("#panel2").slideUp('slow');
+
+    });
+});
+$(document).ready(function(){
+    $("#noflip3").click(function(){
+        $("#panel3").slideUp('slow');
+
+    });
+});
+</script>
+</HEAD>
+<body>
+<a name="begin">
+<H1 style="color: blue;"> Времена года </H1> </a>
+<HR>
+<table>
+<tr>
+<th>
+	<h2> Меню </h2>
+</th>
+<td id="menu"></td>
+</tr>
+<tr>
+<th id="menu1" rowspan="3">
+	<p id="menu1"></p>
+</th>
+<td>
+<a href="#winter">
+<IMG id="flip" SRC="files/zima.jpg" alt='Зима'> </a> </td>
+<td  >
+<A href="#spring">
+<IMG id="flip1" SRC="files/vesna.jpg" alt='Весна'> </A> </td>
+</tr>
+<tr>
+<td  >
+<A href="#summer">
+<IMG id="flip2" SRC="files/leto.jpg" ALT="Лето" > </A> </td>
+<td >
+<A href="#autumn">
+<IMG id="flip3" SRC="files/osen.jpg" ALT="Осень" > </A> </td>
+<tr>
+<td>
+<video width="320" height="240" controls autoplay>
+	<source src="files/god.mp4" type="video/mp4">
+</video> </td>
+<td>
+<audio controls>
+	<source src="files/vremia.mp3" type="audio/mp3">
+</audio> </td>
+</tr>
+</table>
+<script type="text/javascript">
+function daysLeftNewYear() {
+ today = new Date()
+ //Можно установить любую дату
+ nextDate = new Date("January 1, 2021")
+ //Количество миллисекунд в одном дне
+ msPerDay = 24*60*60*1000;
+ //Высчитываем количество дней
+ daysLeft = Math.round((nextDate.getTime() - today.getTime())/msPerDay);
+ dayname = ""
+ ds = ""+daysLeft
+ //Вырезаем последнею цифру
+ dd=parseInt(ds.substr(ds.length-1))
+ //Склоняем слово ДЕНЬ
+ if(daysLeft>4&&daysLeft<21)dayname=" дней";
+ else
+ if(dd==1)dayname=" день";
+ else
+ if(dd==2||dd==3||dd==4)dayname=" дня";
+ else dayname=" дней";
+ //Выводим надпись в документ
+ if(daysLeft<0) {document.write("С новым годом!!!")}
+ else {
+ if(daysLeft==0) {document.write("Завтра новый год!")} else {
+ document.write("До нового года осталось "+daysLeft+dayname+"!")}
+ }
+ }
+</script>
+<script type="text/javascript">daysLeftNewYear()</script>
+<div id='panel'>
+<HR>
+<A name='winter'> <H2 style='color: blue;' > Зима </H2> </A>
+<HR>
+<table>
+<tr>
+<th>
+<P> Чудная картина, </P>
+<P> Как ты мне родна: </P>
+<P> Белая равнина, </P>
+<P> Полная луна, </P>
+<BR>
+<P> Свет небес высоких, </P>
+<P> И блестящий снег, </P>
+<P> И саней далеких </P>
+<P> Одинокий бег. </P>
+<BR>
+</th>
+<th> <IMG SRC="files/zima.jpg" ALT="Зима"> </th>
+</tr>
+</table>
+<hr> <a href="#begin"> <h2 id= 'noflip'>На начало</h2></a>
+</div>
+<div id='panel1'>
+<HR>
+<A name='spring'> <H2 style='color: green;'> Весна </H2> </A>
+<HR>
+<table>
+<tr>
+<th>
+<P>Зеленым бисером на ветках </P>
+<P>Явились первые листочки</P>
+<P>И в небе облаков виньетки,</P>
+<P>И певчих птиц большие точки.</P>
+<BR>
+<P>И заиграло ярким светом</P>
+<P>Весной разбуженное небо…</P>
+<P>И закружилась над планетой</P>
+<P>Весна, но канет вскоре в небыль</P>
+<BR>
+</th>
+<th> <IMG SRC="files/vesna.jpg" ALT="Весна"> </th>
+</tr>
+</table>
+<hr> <a href="#begin"> <h2 id= 'noflip1'>На начало</h2></a>
+</div>
+<div id='panel2'>
+<HR>
+<A name='summer'> <H2 style='color: maroon;'> Лето </H2> </A>
+<HR>
+<table>
+<tr>
+<th>
+<P>Лениво дышит полдень мглистый, </P>
+<P>Лениво катится река, </P>
+<P>И в тверди пламенной и чистой </P>
+<P>Лениво тают облака.</P>
+<BR>
+<P>И всю природу, как туман, </P>
+<P>Дремота жаркая объемлет, </P>
+<P>И сам теперь великий Пан </P>
+<P>В пещере нимф покойно дремлет.</P>
+<BR>
+</th>
+<th><IMG SRC="files/leto.jpg" ALT="Лето"></th>
+</tr>
+</table>
+<hr> <a href="#begin"> <h2 id= 'noflip2'>На начало</h2></a>
+</div>
+<div id='panel3'>
+<HR>
+<A name='autumn'> <H2 style='color: #993300;'> Осень </H2> </A>
+<HR>
+<table>
+<tr>
+<th>
+<P> Унылая пора! Очей очарованье! </P>
+<P>Приятна мне твоя прощальная краса – </P>
+<P>Люблю я пышное природы увяданье, </P>
+<P>В багрец и золото одетые леса, </P>
+<P>В их сенях ветра шум и свежее дыханье, </P>
+<P>И мглой волнистою покрыты небеса,</P>
+<P>И редкий солнца луч, и первые морозы, </P>
+<P>И отдалённые седой зимы угрозы.</P>
+<BR>
+</th>
+<th><IMG SRC="files/osen.jpg" ALT="Осень"></th>
+</tr>
+</table>
+<hr> <a href="#begin"> <h2 id= 'noflip3'>На начало</h2></a>
+</div>
+<script src="script.js" type="text/javascript">spisok()</script>
+</body>
+</HTML>
