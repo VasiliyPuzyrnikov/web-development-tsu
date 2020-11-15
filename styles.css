@@ -3,7 +3,7 @@
 	#menu {width: 100px; height: 50px;}
 	td {text-align: center;width: 300px; height: 200px;}
 	h1, h2 {text-align: center;}
-	p {font-style: italic;font-weight: bold;}
+	p {font-style: normal;font-weight: bold;}
 	img {width: 320px; height: 240px; align-content: center;}
 	#menu1 { vertical-align: top; font-weight: bold;font-family: Times New Roman; font-size: 16pt;}
 	#panel, #panel1, #panel2, #panel3, #nopanel, #flip {
