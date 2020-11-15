@@ -3,6 +3,7 @@ arr=["Январь", "Февраль", "Март", "Апрель", "Май", "И
 for (var i = 0; i <= arr.length; i++) {
 	document.getElementById('menu1').innerHTML=arr[i];
 }
+// функция просчета времени (дней) до нового года
 function daysLeftNewYear() {
  today = new Date()
  //Можно установить любую дату
